@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }  from './app.component';
 import {FormsModule} from "@angular/forms";
-import {StartComponent} from "./start/start.component";
+import {UsernameComponent} from "./user-name/user-name.component";
 import {UsersService} from "./services/users/users.service";
 import {UserListComponent} from "./user-list/user-list.component";
 
 @NgModule({
     imports:      [ BrowserModule,
         FormsModule],
-    declarations: [ AppComponent, StartComponent, UserListComponent ],
+    declarations: [ AppComponent, UsernameComponent, UserListComponent ],
     bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

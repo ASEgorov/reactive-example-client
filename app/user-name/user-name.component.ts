@@ -7,15 +7,17 @@ import {UserInfo} from "../types/UserInfo";
     template: `
     <div>
       <label>name: </label>
-      <input [(ngModel)]="username" placeholder="name">
-      <button (click)="send()"></button>
+      <input [(ngModel)]="username" placeholder="name" [disabled]="userSend">
+      <button (click)="send()" [disabled]="userSend"></button>
     </div>
     `
 })
-export class StartComponent {
+export class UsernameComponent {
     private username: string;
 
     private users:UsersService;
+
+    private userSend:boolean = false;
 
     public constructor(users: UsersService){
         this.users = users;
@@ -27,5 +29,6 @@ export class StartComponent {
 
     public send(){
         this.users.send(new UserInfo(this.username, "Add"));
+        this.userSend = true;
     }
 }

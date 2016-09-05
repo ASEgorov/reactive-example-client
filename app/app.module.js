@@ -12,7 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var forms_1 = require("@angular/forms");
-var start_component_1 = require("./start/start.component");
+var user_name_component_1 = require("./user-name/user-name.component");
 var user_list_component_1 = require("./user-list/user-list.component");
 var AppModule = (function () {
     function AppModule() {
@@ -21,7 +21,7 @@ var AppModule = (function () {
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule,
                 forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent, start_component_1.StartComponent, user_list_component_1.UserListComponent],
+            declarations: [app_component_1.AppComponent, user_name_component_1.UsernameComponent, user_list_component_1.UserListComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

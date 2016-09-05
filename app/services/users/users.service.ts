@@ -76,6 +76,6 @@ export class UsersService {
         if(!this.socket) {
             this.init();
         }
-        this.socket.next(JSON.stringify(data));
+        this.socket.next(<any>JSON.stringify(data));
     }
 }

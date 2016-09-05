@@ -11,25 +11,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var users_service_1 = require("../services/users/users.service");
 var UserInfo_1 = require("../types/UserInfo");
-var StartComponent = (function () {
-    function StartComponent(users) {
+var UsernameComponent = (function () {
+    function UsernameComponent(users) {
+        this.userSend = false;
         this.users = users;
         this.users.connect().subscribe(function (m) {
             console.log("users:" + m);
         });
     }
     ;
-    StartComponent.prototype.send = function () {
+    UsernameComponent.prototype.send = function () {
         this.users.send(new UserInfo_1.UserInfo(this.username, "Add"));
+        this.userSend = true;
     };
-    StartComponent = __decorate([
+    UsernameComponent = __decorate([
         core_1.Component({
             selector: 'start-comp',
-            template: "\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"username\" placeholder=\"name\">\n      <button (click)=\"send()\"></button>\n    </div>\n    "
+            template: "\n    <div>\n      <label>name: </label>\n      <input [(ngModel)]=\"username\" placeholder=\"name\" [disabled]=\"userSend\">\n      <button (click)=\"send()\" [disabled]=\"userSend\"></button>\n    </div>\n    "
         }), 
         __metadata('design:paramtypes', [users_service_1.UsersService])
-    ], StartComponent);
-    return StartComponent;
+    ], UsernameComponent);
+    return UsernameComponent;
 }());
-exports.StartComponent = StartComponent;
-//# sourceMappingURL=start.component.js.map
+exports.UsernameComponent = UsernameComponent;
+//# sourceMappingURL=user-name.component.js.map

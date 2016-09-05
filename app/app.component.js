@@ -16,7 +16,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<h1>My First Angular 2 App</h1>\n    <start-comp></start-comp>\n    <user-list></user-list>\n    ",
+            template: "<h1>Multiplayer canvas</h1>\n    <start-comp></start-comp>\n    <user-list></user-list>\n    ",
             providers: [users_service_1.UsersService],
         }), 
         __metadata('design:paramtypes', [])
