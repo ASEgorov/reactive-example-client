@@ -2,3 +2,5 @@
 node_modules
 typings
 reactive-example-client.iml
+app/*.js
+app/*.js.map
